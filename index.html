@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body onload="InitTests()">
+    <div>
+        Número de pixels:
+        <input type="number" id="cycles" class="input50" />
+    </div>
+    <div>
+        <button onclick="FillRectTest()">Gerar Imagem</button>
+        <a id="downloadCanvas" download="canvas.png">
+            <button onclick="DownloadCanvas()">Download Imagem</button>
+        </a>
+    </div>
+    <canvas id="canvas" width="500" height="500">
+   
+</body>
+
+</html>
