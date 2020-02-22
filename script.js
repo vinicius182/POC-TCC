@@ -6,6 +6,7 @@ var canvasWidth;
 var canvasHeight;
 var id;
 var entityImage = new Image();
+var backgroundImage = new Image();
 
 function InitTests() {
   canvas = document.getElementById('canvas');
@@ -14,13 +15,15 @@ function InitTests() {
   canvasHeight = 100;
   id = ctx.getImageData(0, 0, 1, 1);
   ctx.scale(5,5);
-  entityImage.src = 'pizza.png';
+  entityImage.src = 'img/pizza.png';
+  backgroundImage.src = 'img/fundo-eucatex.jpg';
 }
 
 function FillRectTest() {
   var cycles = document.getElementById('cycles');
 
   ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+  ctx.drawImage(backgroundImage, 0, 0,canvasWidth,canvasHeight);
   for (var i = 0; i < cycles.value; ++i) {
     x = Math.floor(Math.random() * canvasWidth);
     y = Math.floor(Math.random() * canvasHeight);
